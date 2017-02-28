@@ -1,0 +1,15 @@
+<ul class="notes-list"> 
+		  {{#each notes}} 
+			<li id=li-{{this.id}} data-note-id={{this.id}} class="note-item"> 
+				<div class="note-content-container"> 
+					<span class="note-delete"> <a>Delete</a></span> 
+					<span class="note-edit"> <a>Edit</a></span> 
+					<div class="note-content">{{this.text}}</div> 
+				</div> 
+				<div class="note-edit-container" style="display: none;"> 
+					<input class="note-edit-field" type="text"/> 
+					<span class="note-save"> <a>Save</a></span> 
+				</div> 
+			</li> 
+		  {{/each}} 
+		</ul>

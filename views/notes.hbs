@@ -1,0 +1,16 @@
+<div class="notes-caption">
+	<h1>{{user}} notes</h1>
+</div>
+<div class="main-container">
+	<div class="command-container">
+		<form action="/notes/new" class="form" method="post">
+			<input autocomplete="off" id="new-note" name="note_body" placeholder="Type your note..." type="text" />
+			<button type="submit">New</button>
+		</form>
+		<input id="search-note-field" class="search-note-field" placeholder="I'm looking for..." type="text"/>
+		<button id="search-note-button" class="search-note-button">Search</button>
+	</div>
+	<div class="notes-list-container">
+	{{> listNotes notes=notes }}
+	</div>
+</div>
